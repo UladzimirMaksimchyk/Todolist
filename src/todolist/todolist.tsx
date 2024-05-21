@@ -1,19 +1,39 @@
 
 
+type TodolistPropsType = {
+title:string
+tasks: Array<TaskType>
+date: string
+}
 
-export function Todolist() {
+ export type TaskType = {
+    id: number
+    title: string
+    IsDone: boolean
+}
+
+
+
+
+export const Todolist = ( props: TodolistPropsType) => {
+   
+    const tasksElements: Array<JSX.Element> = props.tasks.map((task) => {
+        return(
+            <li>
+            <input type="checkbox" checked={task.IsDone} /> <span>{task.title}</span>
+        </li>
+        );
+    });
+
     return (
         <div className="todolist">
-            <div>
-                <h3>What to learn</h3>
+            <h3>{props.title}</h3>
                 <div>
                     <input />
                     <button>+</button>
                 </div>
                 <ul>
-                    <li><input type="checkbox" checked={true} /> <span>HTML&CSS</span></li>
-                    <li><input type="checkbox" checked={true} /> <span>JS</span></li>
-                    <li><input type="checkbox" checked={false} /> <span>React</span></li>
+                    {tasksElements}
                 </ul>
                 <div>
                     <button>All</button>
@@ -21,6 +41,5 @@ export function Todolist() {
                     <button>Completed</button>
                 </div>
             </div>
-        </div>
     )
 }
