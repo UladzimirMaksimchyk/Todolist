@@ -3,7 +3,7 @@
 type TodolistPropsType = {
 title:string
 tasks: Array<TaskType>
-date: string
+date?: string
 }
 
  export type TaskType = {
