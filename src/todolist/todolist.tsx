@@ -2,8 +2,7 @@
 
 type TodolistPropsType = {
 title:string
-tasks: Array<TaskType>
-date?: string
+tasks: TaskType[]
 }
 
  export type TaskType = {
@@ -15,7 +14,7 @@ date?: string
 
 
 
-export const Todolist = ( props: TodolistPropsType) => {
+export const Todolist = (props:TodolistPropsType) => {
    
     const tasksElements: Array<JSX.Element> = props.tasks.map((task) => {
         return(
