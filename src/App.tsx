@@ -21,18 +21,19 @@ function App() {
         { id: 3, title: 'ReactJS', IsDone: false },
         { id: 4, title: 'Redux', IsDone: false },
     ]
-    const tasks2: Array<TaskType> = [
-        { id: 1, title: 'HTML&CSS', IsDone: true },
-        { id: 2, title: 'JS', IsDone: true },
-        { id: 3, title: 'ReactJS', IsDone: false },
-        { id: 4, title: 'Redux', IsDone: false },
-    ]
+    // const tasks2: Array<TaskType> = [
+    //     { id: 1, title: 'HTML&CSS', IsDone: true },
+    //     { id: 2, title: 'JS', IsDone: true },
+    //     { id: 3, title: 'ReactJS', IsDone: false },
+    //     { id: 4, title: 'Redux', IsDone: false },
+    // ]
 
 
     return (
         <div className="App">
             <Todolist title={"One"} tasks={tasks} />
             <Todolist title={"Two"} tasks={tasks1} />
+            {/* <Todolist title={"Two"} tasks={tasks2} /> */}
 
         </div>
     );
